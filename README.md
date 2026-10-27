@@ -15,6 +15,10 @@ php artisan serve
 
 Open http://localhost:8000. No database, Node build, authentication, or RSVP required. Google Fonts are loaded online; serif/cursive fallbacks work without network access. All invitation images are included locally.
 
+## GitHub Pages
+
+The standalone `index.html` is ready for GitHub Pages. Publish the repository root and keep the `public/wedding/` images and audio folders beside it; no PHP or build step is needed.
+
 ## Content
 
 Edit `app/Support/Wedding.php` for names, family information, venue, ceremony schedule and ceremony identifiers. The venue name/address and Indore map link are **unconfirmed placeholders carried over from the existing invitation**, not verified wedding information; replace before sharing. All Blade text and attributes are escaped.

@@ -128,6 +128,15 @@ nav{position:fixed;z-index:40;bottom:16px;left:50%;transform:translateX(-50%);ma
 #family::after,#venue::after{content:"";position:absolute;z-index:-1;left:50%;top:16px;width:min(640px,84vw);height:250px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 50%,color-mix(in oklab,var(--gold) 30%,transparent),transparent 70%);pointer-events:none}
 @media(max-width:640px){#family::before,#venue::before{inset:18px 10px;border-radius:120px 120px 12px 12px}}
 
+/* One Radha–Krishna miniature painted behind the whole functions section: header and all six cards. */
+#functions{position:relative;isolation:isolate;background:color-mix(in oklab,var(--secondary) 48%,var(--background))}
+#functions::before{content:"";position:absolute;inset:0;z-index:-1;background:url('public/wedding/images/radha-krishna.jpg') center 70%/cover no-repeat;opacity:.9;pointer-events:none}
+#functions::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
+ linear-gradient(180deg,var(--background),transparent 90px,transparent calc(100% - 90px),var(--background)),
+ radial-gradient(ellipse 64% 15% at 50% 2.5%,color-mix(in oklab,var(--background) 90%,transparent),transparent 76%),
+ linear-gradient(180deg,color-mix(in oklab,var(--background) 70%,transparent),color-mix(in oklab,var(--secondary) 58%,transparent) 42%,color-mix(in oklab,var(--background) 74%,transparent))}
+@media(max-width:767px){#functions::before{background-size:auto 122%;background-position:center 46%}}
+
 </style>
 </head>
 <body>
@@ -237,7 +246,7 @@ nav{position:fixed;z-index:40;bottom:16px;left:50%;transform:translateX(-50%);ma
 </section>
 <section id="venue" class="section">
     <header class="section-title reveal"><p class="script gold">where</p><h2>Venue</h2><div class="divider" aria-hidden="true">❁</div></header>
-    <div class="venue-block ornate-frame reveal"><img src="public/wedding/images/lotus.png" alt="" width="816" height="816" loading="lazy"><h3>Venue to be announced</h3><p class="muted">Venue address, Indore, Madhya Pradesh</p><a class="maps-button" href="https://maps.google.com/?q=Indore" target="_blank" rel="noreferrer">Open in Maps</a></div>
+    <div class="venue-block ornate-frame reveal"><img src="public/wedding/images/lotus.png" alt="" width="816" height="816" loading="lazy"><h3>Venue:</h3><p class="muted">Heaven space resort</p><a class="maps-button" href="https://maps.app.goo.gl/oRLDYXpbXKdDtKVT6" target="_blank" rel="noreferrer">Open in Maps</a></div>
 </section>
 <footer class="reveal"><img class="monogram" src="public/wedding/images/wedding-logo.png" alt="" width="1024" height="1024" loading="lazy"><p class="hindi">राधे राधे</p><p class="footer-blessing">As Radha and Krishna are bound by eternal love, we seek your blessings as we begin our journey together.</p><div class="divider" aria-hidden="true">❁</div><p class="script gold">with love, the Jangid families</p></footer>
 </main>

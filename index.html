@@ -61,13 +61,72 @@ nav{position:fixed;z-index:40;bottom:16px;left:50%;transform:translateX(-50%);ma
  .js .scratch-card[data-event="haldi"] .event-details{opacity:1;visibility:visible;transform:none}
 
   .cover-ring,.cover-disco,.cover-petals,.cover-scroll{transition:opacity .6s ease 1s}
-  .scratch-card[data-event="engagement"][data-revealed="true"] .ceremony-cover,.scratch-card[data-event="mayra"][data-revealed="true"] .ceremony-cover,.scratch-card[data-event="pheras"][data-revealed="true"] .ceremony-cover,.scratch-card[data-event="reception"][data-revealed="true"] .ceremony-cover{opacity:0}
+  .scratch-card[data-event="engagement"][data-revealed="true"] .ceremony-cover,.scratch-card[data-event="pheras"][data-revealed="true"] .ceremony-cover,.scratch-card[data-event="reception"][data-revealed="true"] .ceremony-cover{opacity:0}
  .cover-ring{background:radial-gradient(ellipse at center,#3a1424 0%,#1f0a14 70%,#0d0408 100%)}.ring-stars{position:absolute;inset:0}.ring-star{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--gold);animation:star-pulse 2s ease-in-out infinite}.ring-art{position:absolute;left:50%;top:45%;width:148px;height:88px;transform:translate(-50%,-50%);filter:drop-shadow(0 0 16px color-mix(in oklab,var(--gold) 70%,transparent))}.ring-left,.ring-right{position:absolute;top:22px;width:60px;height:60px;border:4px solid var(--gold);border-radius:50%;transition:transform .7s cubic-bezier(.7,0,.3,1)}.ring-left{left:14px}.ring-right{right:14px}.ring-diamond{position:absolute;left:65px;top:2px;width:18px;height:18px;background:#fff8dc;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);animation:diamond-glow 1.5s ease-in-out infinite}.scratch-card[data-event="engagement"][data-revealed="true"] .ring-left{transform:translateX(-38px) rotate(-20deg)}.scratch-card[data-event="engagement"][data-revealed="true"] .ring-right{transform:translateX(38px) rotate(20deg)}
  .cover-petals{background:linear-gradient(160deg,#fff4d6 0%,#ffd97a 45%,#f4a83b 100%)}.petal-field{position:absolute;inset:0;overflow:hidden}.ceremony-petal{position:absolute;color:#e8590c;font:28px var(--serif);filter:drop-shadow(0 2px 4px #a83a0866);animation:petal-sway 3s ease-in-out infinite;transition:transform .8s ease,opacity .8s ease}.scratch-card[data-event="mayra"][data-revealed="true"] .ceremony-petal{animation:none;opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--spin))}.cover-prompt{position:absolute;inset-inline:0;bottom:72px;text-align:center;color:#7a3a08;font:italic 16px var(--serif);text-shadow:0 1px 4px #fff8}
  .cover-disco{background:radial-gradient(ellipse at center,#1a0a2e 0%,#0d0418 60%,#050210 100%)}.disco-beams{position:absolute;left:50%;top:45%;width:2px;height:40%;transform-origin:top center}.disco-beam{position:absolute;inset:0;width:2px;height:100%;background:linear-gradient(to top,transparent,#ffd70066,transparent);transform-origin:bottom center;animation:beam-pulse 2s ease-in-out infinite}.disco-art{position:absolute;left:50%;top:43%;width:120px;height:120px;transform:translate(-50%,-50%);transition:transform 1s ease,opacity 1s ease;filter:drop-shadow(0 0 20px #ffd70099)}.disco-ball{position:absolute;inset:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff8dc,#c0c0c0 40%,#555);overflow:hidden}.disco-ball:before,.disco-ball:after{content:"";position:absolute;inset:18% 0;border-block:1px solid #ffffff55;border-radius:50%}.disco-ball:after{inset:0 18%;border-inline:1px solid #ffffff55}.disco-tile{position:absolute;left:50%;top:50%;width:4px;height:4px;background:#ffd700;box-shadow:0 0 8px currentColor;transform-origin:0 0}.disco-tile:nth-child(3n){background:#ff69b4}.disco-tile:nth-child(3n+1){background:#00ffff}.disco-particles{position:absolute;left:50%;top:43%;width:1px;height:1px}.disco-particle{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--particle-color);box-shadow:0 0 12px var(--particle-color);opacity:0}.scratch-card[data-event="reception"][data-revealed="true"] .disco-art{transform:translate(-50%,-50%) scale(1.3);opacity:0}.scratch-card[data-event="reception"][data-revealed="true"] .disco-particle{animation:disco-burst .8s ease-out forwards}
   .cover-scroll{background:radial-gradient(circle at center,#fff8dc 0%,#e8c982 55%,#8f5a1b 100%);perspective:900px}.scroll-sheet{position:absolute;inset:12% 16%;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#f7e7ce,#fff8dc 48%,#e8d5a3);border:2px solid #b8860b;box-shadow:0 16px 30px #3c280a66;transform-origin:top center;transition:transform 1.15s cubic-bezier(.4,0,.2,1),opacity 1s ease}.scroll-sheet::before,.scroll-sheet::after{content:"";position:absolute;inset:12px;border:1px solid #b8860b66}.scroll-roll{position:absolute;left:-10px;width:calc(100% + 20px);height:28px;border:2px solid #b8860b;border-radius:50%;background:linear-gradient(#f7e7ce,#c5a059,#f7e7ce);box-shadow:0 4px 10px #3c280a55;transition:transform 1.15s cubic-bezier(.4,0,.2,1),opacity 1s ease}.scroll-roll-top{top:-14px}.scroll-roll-bottom{bottom:-14px}.scroll-glyph{position:relative;z-index:1;color:#9b611a;font:52px var(--hindi);text-shadow:0 1px #fff8dc}.scroll-lines{position:absolute;left:22%;right:22%;top:62%;display:grid;gap:8px}.scroll-lines span{height:1px;background:linear-gradient(90deg,transparent,#b8860b,transparent)}.scroll-seal{position:absolute;z-index:1;top:calc(50% - 22px);left:calc(50% - 22px);display:grid;place-items:center;width:44px;height:44px;border:2px solid #b8860b;border-radius:50%;background:#891f34;color:#ffd700;font-size:22px;transition:transform .7s ease,opacity .7s ease}.scratch-card[data-event="pheras"][data-revealed="true"] .scroll-sheet{transform:scaleY(.04);opacity:0}.scratch-card[data-event="pheras"][data-revealed="true"] .scroll-roll-top{transform:translateY(-140px)}.scratch-card[data-event="pheras"][data-revealed="true"] .scroll-roll-bottom{transform:translateY(140px)}.scratch-card[data-event="pheras"][data-revealed="true"] .scroll-seal{transform:scale(.6) rotate(90deg);opacity:0}
    .scratch-card[data-event="haldi"],.scratch-card[data-event="haldi"] .scratch-area,.scratch-card[data-event="haldi"] .event-details{background:#fff}.scratch-card[data-event="haldi"] .scratch-canvas{cursor:grab}.scratch-card[data-event="haldi"].scratching .scratch-canvas{cursor:grabbing}.scratch-card[data-event="haldi"] .scratch-hint{border-color:#b18423;background:#fff;color:#7a5a13;box-shadow:0 4px 14px #8f5a1b22}
-  @keyframes star-pulse{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}@keyframes diamond-glow{0%,100%{opacity:.6}50%{opacity:1;transform:scale(1.15)}}@keyframes petal-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}@keyframes beam-pulse{0%,100%{opacity:.2}50%{opacity:.6}}@keyframes disco-burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+   @keyframes star-pulse{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}@keyframes diamond-glow{0%,100%{opacity:.6}50%{opacity:1;transform:scale(1.15)}}@keyframes petal-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}@keyframes beam-pulse{0%,100%{opacity:.2}50%{opacity:.6}}@keyframes disco-burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+
+/* Ceremony-specific palettes: Mayra is a marigold gift platter; Reception is candlelit and regal. */
+ .cover-petals{background:radial-gradient(circle at 50% 42%,#b94b4f 0%,#7f2636 42%,#3b1427 100%)}.cover-petals::before{content:"";position:absolute;inset:12%;border:1px solid #f4c76b99;border-radius:50%;box-shadow:0 0 0 10px #f4c76b12,0 0 0 22px #f4c76b0d}.mayra-platter{position:absolute;z-index:1;left:50%;top:43%;width:190px;height:142px;transform:translate(-50%,-50%);filter:drop-shadow(0 12px 12px #210b1b99);animation:mayra-platter-float 4.2s ease-in-out infinite}.mayra-tray{position:absolute;left:4px;right:4px;bottom:12px;height:52px;border:3px solid #f4c76b;border-radius:50%;background:radial-gradient(ellipse at 50% 28%,#d9913d,#a84d36 66%,#5e2730);box-shadow:inset 0 0 0 6px #f4c76b33,0 5px 0 #4b1b2b}.mayra-gift{position:absolute;bottom:46px;width:58px;height:46px;border:2px solid #f4c76b;background:linear-gradient(135deg,#e9aa55,#a33f4a);box-shadow:inset 0 0 0 5px #f4c76b22}.mayra-gift::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:7px;transform:translateX(-50%);background:#f4c76b}.mayra-gift::after{content:"";position:absolute;left:50%;top:-14px;width:24px;height:16px;transform:translateX(-50%);border:3px solid #f4c76b;border-bottom:0;border-radius:50% 50% 0 0}.mayra-gift-left{left:28px;transform:rotate(-7deg)}.mayra-gift-right{right:28px;transform:rotate(7deg);background:linear-gradient(135deg,#b55b67,#713047)}.mayra-coconut{position:absolute;left:50%;bottom:58px;width:48px;height:48px;transform:translateX(-50%);border:3px solid #f4c76b;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e6c47b,#8c5a38 62%,#4c2a2d)}.petal-field{z-index:2}.ceremony-petal{color:#f6cf78;text-shadow:0 2px 8px #23091d;animation:mayra-petal-hover 3s ease-in-out infinite}.scratch-card[data-event="mayra"][data-revealed="true"] .mayra-platter{animation:mayra-platter-release .95s cubic-bezier(.2,.75,.35,1) forwards}.scratch-card[data-event="mayra"][data-revealed="true"] .cover-prompt{animation:mayra-prompt-release .65s ease-out forwards}
+ .cover-disco{background:radial-gradient(ellipse at 50% 42%,#78384c 0%,#3b172d 48%,#150b1c 100%)}.cover-disco::before{content:"";position:absolute;inset:14%;border:1px solid #f4c76b55;border-radius:50%;box-shadow:0 0 35px #f4c76b24}.disco-beam{background:linear-gradient(to top,transparent,#f4c76b66,transparent)}.reception-lantern{position:absolute;left:50%;top:50%;width:96px;height:128px;transform:translate(-50%,-50%);animation:reception-lantern-sway 3.6s ease-in-out infinite;transform-origin:50% 0}.lantern-glow{position:absolute;left:50%;top:50%;width:125px;height:125px;transform:translate(-50%,-50%);border-radius:50%;background:#f4c76b55;filter:blur(12px);animation:lantern-glow 2.2s ease-in-out infinite}.lantern-body{position:absolute;left:50%;top:16px;width:70px;height:88px;transform:translateX(-50%);border:3px solid #f4c76b;border-radius:28px 28px 18px 18px;background:linear-gradient(90deg,#8e3d4e,#f1b85d 48%,#7c3044);clip-path:polygon(18% 0,82% 0,100% 22%,86% 100%,14% 100%,0 22%);box-shadow:inset 0 0 18px #ffd98a66,0 0 16px #f4c76b88}.lantern-body::before,.lantern-body::after{content:"";position:absolute;top:8px;bottom:8px;width:2px;background:#ffe6a4}.lantern-body::before{left:22px}.lantern-body::after{right:22px}.lantern-tassel{position:absolute;left:50%;bottom:0;width:18px;height:34px;transform:translateX(-50%);border-top:3px solid #f4c76b;background:repeating-linear-gradient(90deg,#f4c76b 0 2px,transparent 2px 5px);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);animation:reception-tassel-sway 1.8s ease-in-out infinite}.scratch-card[data-event="reception"][data-revealed="true"] .reception-lantern{animation:reception-lantern-release 1.05s cubic-bezier(.2,.8,.3,1) forwards}.scratch-card[data-event="reception"][data-revealed="true"] .disco-beam{animation:reception-beam-flare .8s ease-out forwards}.scratch-card[data-event="reception"][data-revealed="true"] .lantern-glow{animation:reception-glow-release .8s ease-out forwards}
+ @keyframes mayra-platter-float{0%,100%{transform:translate(-50%,-50%) rotate(-1deg)}50%{transform:translate(-50%,-56%) rotate(1deg)}}@keyframes mayra-platter-release{0%{transform:translate(-50%,-50%) rotate(0) scale(1);opacity:1}100%{transform:translate(-50%,-145%) rotate(-12deg) scale(.72);opacity:0}}@keyframes mayra-petal-hover{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-7px) rotate(6deg)}}@keyframes mayra-prompt-release{to{opacity:0;transform:translateY(18px)}}@keyframes reception-lantern-sway{0%,100%{transform:translate(-50%,-50%) rotate(-3deg)}50%{transform:translate(-50%,-50%) rotate(3deg)}}@keyframes reception-tassel-sway{0%,100%{transform:translateX(-50%) rotate(-5deg)}50%{transform:translateX(-50%) rotate(5deg)}}@keyframes lantern-glow{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(.85)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.12)}}@keyframes reception-lantern-release{0%{transform:translate(-50%,-50%) rotate(0) scale(1);opacity:1}55%{transform:translate(-50%,-64%) rotate(8deg) scale(1.08);opacity:1}100%{transform:translate(-50%,-165%) rotate(18deg) scale(.35);opacity:0}}@keyframes reception-glow-release{0%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(2.5)}}@keyframes reception-beam-flare{0%{opacity:.35;transform:scaleY(.45)}45%{opacity:1;transform:scaleY(1.2)}100%{opacity:0;transform:scaleY(1.8)}}
+
+/* Editorial photo covers for Mayra and Reception. The artwork is cropped from the local ceremony panels. */
+.cover-mayra,.cover-reception{isolation:isolate;background-repeat:no-repeat;background-size:200% 200%;background-position:0 100%;}
+.cover-mayra{perspective:1400px}
+.cover-reception{background-color:#1f2520;background-image:linear-gradient(180deg,#13201938 0%,#17201926 38%,#101612e8 100%),var(--event-artwork);will-change:opacity,transform,filter}
+.cover-reception::before{content:"";position:absolute;z-index:-1;inset:14px;border:1px solid #f8e6b080;box-shadow:inset 0 0 0 1px #fff8e51f;pointer-events:none}
+.cover-reception::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(115deg,transparent 28%,#fff8e51c 50%,transparent 72%);mix-blend-mode:screen;pointer-events:none;}
+.cover-editorial{position:absolute;z-index:1;inset:14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:24px 20px 34px;color:#fff8e5;text-align:center;text-shadow:0 2px 18px #07100bcc;pointer-events:none}
+.cover-kicker{font:500 10px/1.4 var(--sans);letter-spacing:.22em;color:#f7d889;text-transform:uppercase}
+.cover-title{margin:8px 0 3px;font:56px/1 var(--script);font-weight:400;color:#fff8e5}
+.cover-rule{display:grid;place-items:center;width:100%;font:16px/1 var(--serif);color:#f2cf78}
+.cover-subtitle{max-width:220px;margin-top:8px;font:italic 15px/1.35 var(--serif);color:#fff8e5d9}
+.scratch-card[data-event="reception"][data-revealed="true"] .cover-reception{animation:reception-cover-crossfade 1.15s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes reception-cover-crossfade{0%{opacity:1;transform:scale(1);filter:brightness(1) blur(0)}55%{opacity:.8;transform:scale(1.018);filter:brightness(1.08) blur(0)}100%{opacity:0;transform:scale(1.04);filter:brightness(1.16) blur(3px)}}
+
+/* Mayra: the photo cover is split into two doors that swing open on their outer hinges. */
+.mayra-door{position:absolute;inset:0;background-color:#27352e;background-image:linear-gradient(180deg,#1e2a2480 0%,#17241e22 42%,#101914e8 100%),var(--event-artwork);background-repeat:no-repeat;background-size:200% 200%;background-position:0 100%;backface-visibility:hidden;will-change:transform,opacity}
+.mayra-door::before{content:"";position:absolute;inset:14px;border:1px solid #f8e6b080;box-shadow:inset 0 0 0 1px #fff8e51f;pointer-events:none}
+.mayra-door::after{content:"";position:absolute;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent,#f8e6b0aa 24%,#f8e6b0d9 50%,#f8e6b0aa 76%,transparent);box-shadow:0 0 22px 9px #10081099;pointer-events:none}
+.mayra-door-left{clip-path:inset(0 50% 0 0);transform-origin:0 50%}
+.mayra-door-right{clip-path:inset(0 0 0 50%);transform-origin:100% 50%}
+.mayra-door-left::after{left:calc(50% - 3px)}
+.mayra-door-right::after{left:50%}
+.scratch-card[data-event="mayra"][data-revealed="true"] .mayra-door-left{animation:mayra-door-open-left 1.15s cubic-bezier(.4,0,.3,1) forwards}
+.scratch-card[data-event="mayra"][data-revealed="true"] .mayra-door-right{animation:mayra-door-open-right 1.15s cubic-bezier(.4,0,.3,1) forwards}
+.scratch-card[data-event="mayra"][data-revealed="true"] .ceremony-cover{visibility:hidden;transition:visibility 0s 1.25s}
+.scratch-card[data-event="mayra"][data-revealed="true"] .cover-editorial{opacity:0;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
+.scratch-card[data-event="mayra"][data-revealed="true"] .event-details{transition-delay:.16s}
+@keyframes mayra-door-open-left{0%{opacity:1;transform:rotateY(0deg)}55%{opacity:1;transform:rotateY(-46deg)}88%{opacity:1;transform:rotateY(-78deg)}100%{opacity:0;transform:rotateY(-86deg);visibility:hidden}}
+@keyframes mayra-door-open-right{0%{opacity:1;transform:rotateY(0deg)}55%{opacity:1;transform:rotateY(46deg)}88%{opacity:1;transform:rotateY(78deg)}100%{opacity:0;transform:rotateY(86deg);visibility:hidden}}
+
+/* Sangeet: the editorial copy clears as the fabric parts, then the cover itself is removed. */
+.scratch-card[data-event="sangeet"][data-revealed="true"] .cover-editorial{opacity:0;transform:translateY(12px);transition:opacity .4s ease,transform .4s ease}
+.scratch-card[data-event="sangeet"][data-revealed="true"] .ceremony-cover{opacity:0;visibility:hidden;transition:opacity .4s ease 1.85s,visibility 0s 2.25s}
+.scratch-card[data-event="sangeet"][data-revealed="true"] .event-details{transition-delay:.15s}
+
+/* Festive wedding canvases behind the blessings (परिवार) and venue panels. */
+#family,#venue{position:relative;isolation:isolate;overflow:hidden}
+#family{background:
+ linear-gradient(180deg,var(--background),transparent 110px,transparent calc(100% - 110px),var(--background)),
+ radial-gradient(ellipse at 50% 2%,color-mix(in oklab,var(--gold) 26%,transparent),transparent 46%),
+ linear-gradient(180deg,color-mix(in oklab,var(--card) 74%,transparent),color-mix(in oklab,var(--secondary) 72%,transparent) 52%,color-mix(in oklab,var(--card) 84%,transparent)),
+ url('public/wedding/images/pichwai-bg.jpg') center 18%/cover no-repeat,
+ color-mix(in oklab,var(--background) 88%,var(--secondary))}
+#venue{background:
+ linear-gradient(180deg,var(--background),transparent 110px,transparent calc(100% - 110px),var(--background)),
+ radial-gradient(ellipse at 50% 100%,color-mix(in oklab,var(--peacock) 16%,transparent),transparent 54%),
+ radial-gradient(ellipse at 50% 4%,color-mix(in oklab,var(--gold) 20%,transparent),transparent 44%),
+ linear-gradient(180deg,color-mix(in oklab,var(--card) 80%,transparent),color-mix(in oklab,var(--secondary) 68%,transparent) 48%,color-mix(in oklab,var(--card) 78%,transparent)),
+ url('public/wedding/images/pichwai-bg.jpg') center 96%/cover no-repeat,
+ color-mix(in oklab,var(--background) 88%,var(--peacock))}
+#family::before,#venue::before{content:"";position:absolute;z-index:-1;inset:26px 14px;border:1px solid color-mix(in oklab,var(--gold) 55%,transparent);border-radius:180px 180px 14px 14px;box-shadow:inset 0 0 0 5px color-mix(in oklab,var(--card) 26%,transparent);pointer-events:none}
+#family::after,#venue::after{content:"";position:absolute;z-index:-1;left:50%;top:16px;width:min(640px,84vw);height:250px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 50%,color-mix(in oklab,var(--gold) 30%,transparent),transparent 70%);pointer-events:none}
+@media(max-width:640px){#family::before,#venue::before{inset:18px 10px;border-radius:120px 120px 12px 12px}}
 
 </style>
 </head>
@@ -85,7 +144,7 @@ nav{position:fixed;z-index:40;bottom:16px;left:50%;transform:translateX(-50%);ma
 </div>
 <div class="petals" aria-hidden="true"></div>
 <audio id="wedding-music" loop preload="auto" aria-label="Wedding invitation background music">
-    <source src="public/wedding/audio/wedding-bollywood-theme.wav?v=2" type="audio/wav">
+    <source src="public/wedding/audio/Navjot Ahuja - Khat (Lyrics) - desibeats.mp3?v=2" type="audio/wav">
 </audio>
 <button id="music-toggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Play wedding music" hidden>
     <span class="music-icon" aria-hidden="true">♫</span><span class="music-label">Music</span>
@@ -188,6 +247,7 @@ const smooth = value => { const t = Math.max(0, Math.min(1, value)); return t*t*
 function mountCurtain(cover) {
  const NS = 'http://www.w3.org/2000/svg';
  const make = (tag, attributes) => { const node = document.createElementNS(NS, tag); for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value); return node; };
+ const OPEN_MS = 1400, CLOSE_MS = 1300, DEPTH_DELAY = 600;
  const svg = make('svg', {viewBox:'0 0 1000 1000', preserveAspectRatio:'none', class:'curtain-fabric', 'aria-hidden':'true'});
  const rows = [];
  for (const side of [-1, 1]) for (let row = 0; row < ROWS; row++) {
@@ -197,21 +257,22 @@ function mountCurtain(cover) {
  }
  cover.replaceChildren(svg);
  const media = matchMedia('(prefers-reduced-motion: reduce)');
-  let opened = false, changed = false, started = performance.now();
+  let opened = false, changed = false, started = performance.now(), frame = 0;
  const draw = now => {
-  const elapsed = media.matches || !changed ? (opened ? 3400 : 2000) : now - started;
+  frame = 0;
+  const elapsed = !changed ? (opened ? DEPTH_DELAY + OPEN_MS : CLOSE_MS) : now - started;
   for (const {group,side,row} of rows) {
-   const depth = row / (ROWS-1), delay = (1-depth)*1100;
-    const progress = opened ? smooth((elapsed-delay)/2300) : 1-smooth(elapsed/2000);
+   const depth = row / (ROWS-1), delay = (1-depth)*DEPTH_DELAY;
+    const progress = opened ? smooth((elapsed-delay)/OPEN_MS) : 1-smooth(elapsed/CLOSE_MS);
    const breeze = Math.sin(now/850+depth*2.8+side*.55)*.022*depth*depth + Math.sin(depth*8-now/670)*.006*depth;
-   const width = 1-progress*.94+(media.matches ? 0 : breeze)*(1-progress*.75), anchor = side < 0 ? 0 : 1000;
+   const width = (1-progress)*(1+(media.matches ? 0 : breeze)*7), anchor = side < 0 ? 0 : 1000;
    group.setAttribute('transform',`translate(${anchor+side*progress*10} 0) scale(${width} 1) translate(${-anchor} 0)`);
   }
-  if (!media.matches) requestAnimationFrame(draw);
+  if (changed && !media.matches && elapsed < (opened ? DEPTH_DELAY + OPEN_MS : CLOSE_MS) + 150) frame = requestAnimationFrame(draw);
  };
  draw(started);
  media.addEventListener('change', () => draw(performance.now()));
-  return value => { opened = value; changed = true; started = performance.now(); if(media.matches) draw(started); };
+  return value => { opened = value; changed = true; started = performance.now(); cancelAnimationFrame(frame); if(media.matches) draw(started); else frame = requestAnimationFrame(draw); };
 }
 
 
@@ -219,6 +280,14 @@ const make = (tag, className) => {
  const node = document.createElement(tag); node.className = className; return node;
 };
 const setPrompt = (button, text) => { button.innerHTML = `<span class="ceremony-control-label">${text}</span>`; };
+const mountEditorialCopy = (cover, kickerText, titleText, subtitleText) => {
+ const copy = make('div', 'cover-editorial');
+ const kicker = make('span', 'cover-kicker'); kicker.textContent = kickerText;
+ const title = make('strong', 'cover-title'); title.textContent = titleText;
+ const rule = make('span', 'cover-rule'); rule.textContent = '✦';
+ const subtitle = make('span', 'cover-subtitle'); subtitle.textContent = subtitleText;
+ copy.append(kicker, title, rule, subtitle); cover.append(copy);
+};
 
 function mountRingCover(cover) {
  cover.classList.add('cover-ring'); cover.replaceChildren();
@@ -226,31 +295,20 @@ function mountRingCover(cover) {
  for (let i = 0; i < 18; i++) { const star = make('span', 'ring-star'); star.style.left = `${i * 53 % 100}%`; star.style.top = `${i * 37 % 100}%`; star.style.animationDelay = `${i * .1}s`; stars.append(star); }
  const art = make('div', 'ring-art'); art.append(make('span', 'ring-left'), make('span', 'ring-right'), make('span', 'ring-diamond'));
  cover.append(stars, art);
+ mountEditorialCopy(cover, 'A PROMISE • A BEGINNING', 'Engagement', 'where forever begins');
 }
 
 function mountFlowerCover(cover) {
- cover.classList.add('cover-petals'); cover.replaceChildren();
- const petals = make('div', 'petal-field');
- for (let i = 0; i < 14; i++) {
-  const petal = make('span', 'ceremony-petal');
-  const angle = i / 14 * Math.PI * 2;
-  petal.textContent = '✿'; petal.style.left = `${8 + i * 37 % 84}%`; petal.style.top = `${8 + i * 53 % 84}%`;
-  petal.style.setProperty('--dx', `${Math.cos(angle) * (70 + i % 4 * 24)}px`);
-  petal.style.setProperty('--dy', `${80 + i % 3 * 28}px`); petal.style.setProperty('--spin', `${i * 47 + 180}deg`); petal.style.animationDelay = `${i * .08}s`; petals.append(petal);
- }
- const prompt = make('p', 'cover-prompt'); prompt.textContent = 'Follow the flowers'; petals.append(prompt); cover.append(petals);
+ cover.classList.add('cover-mayra'); cover.replaceChildren();
+ const left = make('div', 'mayra-door mayra-door-left'); left.setAttribute('aria-hidden', 'true');
+ const right = make('div', 'mayra-door mayra-door-right'); right.setAttribute('aria-hidden', 'true');
+ cover.append(left, right);
+ mountEditorialCopy(cover, 'FAMILY • FLOWERS • BLESSINGS', 'Mayra', 'an afternoon of love and celebration');
 }
 
 function mountDiscoCover(cover) {
- cover.classList.add('cover-disco'); cover.replaceChildren();
- const beams = make('div', 'disco-beams');
- for (let i = 0; i < 12; i++) { const beam = make('span', 'disco-beam'); beam.style.rotate = `${i * 30}deg`; beam.style.animationDelay = `${i * .05}s`; beams.append(beam); }
- const art = make('div', 'disco-art'); const ball = make('div', 'disco-ball');
- for (let i = 0; i < 12; i++) { const tile = make('span', 'disco-tile'); tile.style.rotate = `${i * 30}deg`; ball.append(tile); }
- art.append(ball);
- const particles = make('div', 'disco-particles');
- for (let i = 0; i < 20; i++) { const particle = make('span', 'disco-particle'); const angle = i / 20 * Math.PI * 2; particle.style.setProperty('--dx', `${Math.cos(angle) * (100 + i % 5 * 30)}px`); particle.style.setProperty('--dy', `${Math.sin(angle) * (100 + i % 5 * 30)}px`); particle.style.setProperty('--particle-color', i % 3 === 0 ? '#ffd700' : i % 3 === 1 ? '#ff69b4' : '#00ffff'); particles.append(particle); }
- cover.append(beams, art, particles);
+ cover.classList.add('cover-reception'); cover.replaceChildren();
+ mountEditorialCopy(cover, 'DINNER • MUSIC • CELEBRATION', 'Reception', 'an evening beneath the lights');
 }
 
 function mountScrollCover(cover) {
@@ -261,21 +319,23 @@ function mountScrollCover(cover) {
  const glyph = make('span', 'scroll-glyph'); glyph.textContent = 'ॐ';
  const lines = make('div', 'scroll-lines'); lines.append(make('span', ''), make('span', ''), make('span', ''));
  sheet.append(topRoll, bottomRoll, glyph, lines, seal); cover.append(sheet);
+ mountEditorialCopy(cover, 'SACRED VOWS • ETERNAL LOVE', 'Wedding Pheras', 'under the sacred fire');
 }
 
 class CeremonyCard {
  constructor(card) {
    this.card = card; this.revealed = false;
   this.details = card.querySelector('.event-details');
-  this.cover = card.querySelector('.ceremony-cover'); this.cover.hidden = false;
+   this.cover = card.querySelector('.ceremony-cover'); this.cover.hidden = false;
+   this.cover.style.setProperty('--event-artwork', `url(${JSON.stringify(card.dataset.artwork)})`);
   this.button = card.querySelector('.ceremony-open'); this.button.hidden = false;
   this.footer = card.querySelector('.reveal-event'); this.footer.hidden = false;
    const event = card.dataset.event;
-   if (event === 'engagement') { mountRingCover(this.cover); setPrompt(this.button, 'Tap the rings'); }
-   else if (event === 'mayra') { mountFlowerCover(this.cover); setPrompt(this.button, 'Tap the flowers'); }
-   else if (event === 'sangeet') { this.cover.classList.add('cover-curtain'); this.moveCurtain = mountCurtain(this.cover); setPrompt(this.button, 'Open the curtains'); }
-   else if (event === 'pheras') { mountScrollCover(this.cover); setPrompt(this.button, 'Unroll the vows'); }
-   else if (event === 'reception') { mountDiscoCover(this.cover); setPrompt(this.button, 'Click the celebration'); }
+    if (event === 'engagement') { mountRingCover(this.cover); setPrompt(this.button, 'Discover the promise'); }
+    else if (event === 'mayra') { mountFlowerCover(this.cover); setPrompt(this.button, 'Open the Mayra ceremony'); }
+    else if (event === 'sangeet') { this.cover.classList.add('cover-curtain'); this.moveCurtain = mountCurtain(this.cover); mountEditorialCopy(this.cover, 'MUSIC • MOVEMENT • JOY', 'Sangeet', 'an evening of rhythm and celebration'); setPrompt(this.button, 'Enter the music'); }
+    else if (event === 'pheras') { mountScrollCover(this.cover); setPrompt(this.button, 'Open the vows'); }
+    else if (event === 'reception') { mountDiscoCover(this.cover); setPrompt(this.button, 'Enter the reception'); }
   this.details.setAttribute('aria-hidden', 'true');
    this.button.addEventListener('click', () => this.reveal());
   this.footer.addEventListener('click', () => this.revealed ? this.replay() : this.reveal());

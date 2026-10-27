@@ -27,7 +27,7 @@ Edit `app/Support/Wedding.php` for names, family information, venue, ceremony sc
 
 - 1.6-second perspective opening doors, fading/expanding seal, softly breathing logo and shimmering opening label.
 - Staggered scroll reveals, passive requestAnimationFrame hero parallax, drifting petals, smooth anchor navigation, button transitions and a guest-controlled original Bollywood-inspired romantic instrumental.
-- Six independent ceremony interactions: Engagement rings split apart, Mayra flowers drift away, Sangeet fabric curtains gather into individual pleats, Haldi scratches a marigold gold foil, Pheras unroll a sacred vow scroll and Reception bursts into a disco-ball celebration.
+- Six independent ceremony interactions: Engagement rings split apart, Mayra's illustrated gift scene lifts away as a refined photo cover, Sangeet fabric curtains gather into individual pleats, Haldi scratches a marigold gold foil, Pheras unroll a sacred vow scroll and Reception dissolves its illustrated evening scene into the details.
 - Smooth CSS transitions, stable square artwork surfaces, keyboard controls, per-card replay and Reveal All. Every page refresh starts with all ceremony cards unrevealed. Mobile scrolling is suppressed only while scratching the Haldi surface.
 - Hindi couple names, a readable mobile invitation message background and bride-first family cards. Mehndi and the Radha Krishna section are removed.
 - Reduced-motion mode disables decorative animation, parallax and delays. Without JavaScript the invitation and all details remain visible. Failed card images reveal details rather than trapping guests.

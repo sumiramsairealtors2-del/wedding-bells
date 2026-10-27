@@ -4,6 +4,14 @@ const make = (tag, className) => {
  const node = document.createElement(tag); node.className = className; return node;
 };
 const setPrompt = (button, text) => { button.innerHTML = `<span class="ceremony-control-label">${text}</span>`; };
+const mountEditorialCopy = (cover, kickerText, titleText, subtitleText) => {
+ const copy = make('div', 'cover-editorial');
+ const kicker = make('span', 'cover-kicker'); kicker.textContent = kickerText;
+ const title = make('strong', 'cover-title'); title.textContent = titleText;
+ const rule = make('span', 'cover-rule'); rule.textContent = '✦';
+ const subtitle = make('span', 'cover-subtitle'); subtitle.textContent = subtitleText;
+ copy.append(kicker, title, rule, subtitle); cover.append(copy);
+};
 
 function mountRingCover(cover) {
  cover.classList.add('cover-ring'); cover.replaceChildren();
@@ -11,31 +19,17 @@ function mountRingCover(cover) {
  for (let i = 0; i < 18; i++) { const star = make('span', 'ring-star'); star.style.left = `${i * 53 % 100}%`; star.style.top = `${i * 37 % 100}%`; star.style.animationDelay = `${i * .1}s`; stars.append(star); }
  const art = make('div', 'ring-art'); art.append(make('span', 'ring-left'), make('span', 'ring-right'), make('span', 'ring-diamond'));
  cover.append(stars, art);
+ mountEditorialCopy(cover, 'A PROMISE • A BEGINNING', 'Engagement', 'where forever begins');
 }
 
 function mountFlowerCover(cover) {
- cover.classList.add('cover-petals'); cover.replaceChildren();
- const petals = make('div', 'petal-field');
- for (let i = 0; i < 14; i++) {
-  const petal = make('span', 'ceremony-petal');
-  const angle = i / 14 * Math.PI * 2;
-  petal.textContent = '✿'; petal.style.left = `${8 + i * 37 % 84}%`; petal.style.top = `${8 + i * 53 % 84}%`;
-  petal.style.setProperty('--dx', `${Math.cos(angle) * (70 + i % 4 * 24)}px`);
-  petal.style.setProperty('--dy', `${80 + i % 3 * 28}px`); petal.style.setProperty('--spin', `${i * 47 + 180}deg`); petal.style.animationDelay = `${i * .08}s`; petals.append(petal);
- }
- const prompt = make('p', 'cover-prompt'); prompt.textContent = 'Follow the flowers'; petals.append(prompt); cover.append(petals);
+ cover.classList.add('cover-mayra'); cover.replaceChildren();
+ mountEditorialCopy(cover, 'FAMILY • FLOWERS • BLESSINGS', 'Mayra', 'an afternoon of love and celebration');
 }
 
 function mountDiscoCover(cover) {
- cover.classList.add('cover-disco'); cover.replaceChildren();
- const beams = make('div', 'disco-beams');
- for (let i = 0; i < 12; i++) { const beam = make('span', 'disco-beam'); beam.style.rotate = `${i * 30}deg`; beam.style.animationDelay = `${i * .05}s`; beams.append(beam); }
- const art = make('div', 'disco-art'); const ball = make('div', 'disco-ball');
- for (let i = 0; i < 12; i++) { const tile = make('span', 'disco-tile'); tile.style.rotate = `${i * 30}deg`; ball.append(tile); }
- art.append(ball);
- const particles = make('div', 'disco-particles');
- for (let i = 0; i < 20; i++) { const particle = make('span', 'disco-particle'); const angle = i / 20 * Math.PI * 2; particle.style.setProperty('--dx', `${Math.cos(angle) * (100 + i % 5 * 30)}px`); particle.style.setProperty('--dy', `${Math.sin(angle) * (100 + i % 5 * 30)}px`); particle.style.setProperty('--particle-color', i % 3 === 0 ? '#ffd700' : i % 3 === 1 ? '#ff69b4' : '#00ffff'); particles.append(particle); }
- cover.append(beams, art, particles);
+ cover.classList.add('cover-reception'); cover.replaceChildren();
+ mountEditorialCopy(cover, 'DINNER • MUSIC • CELEBRATION', 'Reception', 'an evening beneath the lights');
 }
 
 function mountScrollCover(cover) {
@@ -46,21 +40,23 @@ function mountScrollCover(cover) {
  const glyph = make('span', 'scroll-glyph'); glyph.textContent = 'ॐ';
  const lines = make('div', 'scroll-lines'); lines.append(make('span', ''), make('span', ''), make('span', ''));
  sheet.append(topRoll, bottomRoll, glyph, lines, seal); cover.append(sheet);
+ mountEditorialCopy(cover, 'SACRED VOWS • ETERNAL LOVE', 'Wedding Pheras', 'under the sacred fire');
 }
 
 export class CeremonyCard {
  constructor(card) {
    this.card = card; this.revealed = false;
   this.details = card.querySelector('.event-details');
-  this.cover = card.querySelector('.ceremony-cover'); this.cover.hidden = false;
+   this.cover = card.querySelector('.ceremony-cover'); this.cover.hidden = false;
+   this.cover.style.setProperty('--event-artwork', `url(${JSON.stringify(card.dataset.artwork)})`);
   this.button = card.querySelector('.ceremony-open'); this.button.hidden = false;
   this.footer = card.querySelector('.reveal-event'); this.footer.hidden = false;
    const event = card.dataset.event;
-   if (event === 'engagement') { mountRingCover(this.cover); setPrompt(this.button, 'Tap the rings'); }
-   else if (event === 'mayra') { mountFlowerCover(this.cover); setPrompt(this.button, 'Tap the flowers'); }
-   else if (event === 'sangeet') { this.cover.classList.add('cover-curtain'); this.moveCurtain = mountCurtain(this.cover); setPrompt(this.button, 'Open the curtains'); }
-   else if (event === 'pheras') { mountScrollCover(this.cover); setPrompt(this.button, 'Unroll the vows'); }
-   else if (event === 'reception') { mountDiscoCover(this.cover); setPrompt(this.button, 'Click the celebration'); }
+    if (event === 'engagement') { mountRingCover(this.cover); setPrompt(this.button, 'Discover the promise'); }
+    else if (event === 'mayra') { mountFlowerCover(this.cover); setPrompt(this.button, 'Open the Mayra ceremony'); }
+    else if (event === 'sangeet') { this.cover.classList.add('cover-curtain'); this.moveCurtain = mountCurtain(this.cover); mountEditorialCopy(this.cover, 'MUSIC • MOVEMENT • JOY', 'Sangeet', 'an evening of rhythm and celebration'); setPrompt(this.button, 'Enter the music'); }
+    else if (event === 'pheras') { mountScrollCover(this.cover); setPrompt(this.button, 'Open the vows'); }
+    else if (event === 'reception') { mountDiscoCover(this.cover); setPrompt(this.button, 'Enter the reception'); }
   this.details.setAttribute('aria-hidden', 'true');
    this.button.addEventListener('click', () => this.reveal());
   this.footer.addEventListener('click', () => this.revealed ? this.replay() : this.reveal());

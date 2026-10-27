@@ -91,14 +91,14 @@ nav{position:fixed;z-index:40;bottom:16px;left:50%;transform:translateX(-50%);ma
 .cover-scroll .cover-kicker{color:#716441}
 .cover-scroll .cover-subtitle{color:#190404d9}
 /* Haldi: copy printed on the marigold foil, above the scratch surface, clearing as the foil lifts. */
-.haldi-copy{z-index:2;justify-content:flex-start;padding:24px 18px 0;text-shadow:0 1px 0 #fffdf7e6}
+.haldi-copy{z-index:2;justify-content:center;padding:0 18px;text-shadow:0 1px 0 #fffdf7e6}
 .haldi-copy .cover-kicker{color:#716441}
 .haldi-copy .cover-title{margin:2px 0 0;font-size:42px;color:#7c5a10}
 .haldi-copy .cover-rule{margin-top:6px;font-size:12px;color:#a8802a}
 .haldi-copy .cover-subtitle{margin-top:2px;margin-bottom:0;font-size:13px;color:#190404d9;text-shadow:none}
 .scratch-card[data-event="haldi"][data-revealed="true"] .haldi-copy{opacity:0;transition:opacity .7s ease}
 html:not(.js) .haldi-copy{display:none}
-@media(max-width:640px){.haldi-copy{padding-top:18px}.haldi-copy .cover-title{font-size:36px}}
+@media(max-width:640px){.haldi-copy .cover-title{font-size:38px}}
 .scratch-card[data-event="reception"][data-revealed="true"] .cover-reception{animation:reception-cover-crossfade 1.15s cubic-bezier(.4,0,.2,1) forwards}
 @keyframes reception-cover-crossfade{0%{opacity:1;transform:scale(1);filter:brightness(1) blur(0)}55%{opacity:.8;transform:scale(1.018);filter:brightness(1.08) blur(0)}100%{opacity:0;transform:scale(1.04);filter:brightness(1.16) blur(3px)}}
 
@@ -431,18 +431,6 @@ class ScratchCard {
             context.fillStyle = i % 2 ? '#fffdf7' : '#b18423'; context.beginPath(); context.arc(x, y, 1 + i % 3, 0, Math.PI * 2); context.fill();
         }
         context.globalAlpha = 1;
-        const center = 384;
-        context.strokeStyle = 'rgba(177, 132, 35, .72)'; context.lineWidth = 3;
-        for (const radius of [76, 94, 112]) { context.beginPath(); context.arc(center, center, radius, 0, Math.PI * 2); context.stroke(); }
-        for (let i = 0; i < 12; i++) {
-            const angle = i / 12 * Math.PI * 2;
-            context.save(); context.translate(center, center); context.rotate(angle);
-            context.fillStyle = 'rgba(218, 165, 32, .72)'; context.beginPath(); context.moveTo(0, -82); context.lineTo(10, -106); context.lineTo(0, -128); context.lineTo(-10, -106); context.closePath(); context.fill();
-            context.restore();
-        }
-        context.fillStyle = 'rgba(177, 132, 35, .88)'; context.beginPath(); context.arc(center, center, 52, 0, Math.PI * 2); context.fill();
-        context.fillStyle = '#fffdf7'; context.font = '600 38px "Tiro Devanagari Hindi", serif'; context.textAlign = 'center'; context.fillText('हल्दी', center, center + 14);
-        context.textAlign = 'start';
     }
     resize() {
         if (this.revealed) return;
